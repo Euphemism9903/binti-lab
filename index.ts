@@ -47,13 +47,13 @@ const labels = { app: "hello" };
 const deployment = new k8s.apps.v1.Deployment("hello", {
     spec: {
         selector: { matchLabels: labels },
-        replicas: 2,
+        replicas: 3,
         template: {
             metadata: { labels },
             spec: {
                 containers: [{
                     name: "nginx",
-                    image: "nginx:1.27",
+                    image: "nginx:1.28",
                     ports: [{ containerPort: 80 }],
                     resources: { requests: { cpu: "250m", memory: "512Mi" } },
                 }],
