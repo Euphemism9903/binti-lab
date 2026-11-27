@@ -3,3 +3,10 @@ steps:
     command: "npm ci && npx tsc --noEmit"
     agents:
       queue: blabowin
+
+  - wait
+  
+  - label: ":pulumi: Preview"
+    command: "pulumi preview --stack dev --diff"
+    agents:
+      queue: blabowin
