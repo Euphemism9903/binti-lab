@@ -1,0 +1,5 @@
+steps:
+  - label: ":typescript: Type check"
+    command: "npm ci && npx tsc --noEmit"
+    agents:
+      queue: blabowin
