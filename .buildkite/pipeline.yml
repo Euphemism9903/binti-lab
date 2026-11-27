@@ -7,6 +7,6 @@ steps:
   - wait
   
   - label: ":pulumi: Preview"
-    command: "pulumi preview --stack dev --diff"
+    command: "npm ci && pulumi preview --stack dev --diff"
     agents:
       queue: blabowin
